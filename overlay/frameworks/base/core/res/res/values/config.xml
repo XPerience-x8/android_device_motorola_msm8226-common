@@ -88,12 +88,12 @@
     <!-- Vibrator pattern to be used as for notifications while alerts
          are disabled (e.g. during phone calls) if enabled by the user.
      -->
-    <integer-array name="config_notificationNoAlertsVibePattern">
+    <!--<integer-array name="config_notificationNoAlertsVibePattern">
         <item>0</item>
         <item>30</item>
         <item>75</item>
         <item>30</item>
-    </integer-array>
+    </integer-array>-->
 
     <!-- Performance profiles
     <string name="config_perf_profile_prop">sys.perf.profile</string>
