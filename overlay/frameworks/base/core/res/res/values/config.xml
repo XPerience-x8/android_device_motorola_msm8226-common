@@ -22,10 +22,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">false</bool>
+    <add-resource type="bool" name="config_intrusiveBatteryLed">false</add-resource>
 
     <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
-    <bool name="config_multiColorBatteryLed">false</bool>
+    <add-resource type="bool" name="config_multiColorBatteryLed">false</add-resource>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
@@ -88,16 +88,16 @@
     <!-- Vibrator pattern to be used as for notifications while alerts
          are disabled (e.g. during phone calls) if enabled by the user.
      -->
-    <integer-array name="config_notificationNoAlertsVibePattern">
+    <add-resource type="integer-array" name="config_notificationNoAlertsVibePattern">
         <item>0</item>
         <item>30</item>
         <item>75</item>
         <item>30</item>
-    </integer-array>
+    </add-resource>
 
     <!-- Performance profiles -->
-    <string name="config_perf_profile_prop">sys.perf.profile</string>
-    <string name="config_perf_profile_default_entry">1</string>
+    <add-resource type="string" name="config_perf_profile_prop">sys.perf.profile</add-resource>
+    <add-resource type="string" name="config_perf_profile_default_entry">1</add-resource>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
