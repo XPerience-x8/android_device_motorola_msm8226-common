@@ -22,10 +22,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <add-resource type="bool" name="config_intrusiveBatteryLed">false</add-resource>
+    <bool name="config_intrusiveBatteryLed">false</bool>
 
     <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
-    <add-resource type="bool" name="config_multiColorBatteryLed">false</add-resource>
+    <bool name="config_multiColorBatteryLed">false</bool>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
@@ -85,27 +85,13 @@
         <item>75</item>
     </integer-array>
 
-    <!-- Vibrator pattern to be used as for notifications while alerts
-         are disabled (e.g. during phone calls) if enabled by the user.
-     -->
-    <add-resource type="integer-array" name="config_notificationNoAlertsVibePattern">
-        <item>0</item>
-        <item>30</item>
-        <item>75</item>
-        <item>30</item>
-    </add-resource>
-
-    <!-- Performance profiles -->
-    <add-resource type="string" name="config_perf_profile_prop">sys.perf.profile</add-resource>
-    <add-resource type="string" name="config_perf_profile_default_entry">1</add-resource>
-
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
          The default is false. -->
     <bool name="config_lidControlsSleep">true</bool>
 
     <!-- Whether to enable auto provisioning the app for new SIM card on boot.-->
-    <add-resource type="bool" name="config_auto_provision_enable">true</add-resource>
+    <bool name="config_auto_provision_enable">true</bool>
 
     <!-- Set to true if we need to not prefer an APN.
          This is being added to enable a simple scenario of pre-paid
