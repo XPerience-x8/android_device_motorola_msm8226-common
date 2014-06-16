@@ -105,7 +105,7 @@
     <bool name="config_lidControlsSleep">true</bool>
 
     <!-- Whether to enable auto provisioning the app for new SIM card on boot.-->
-    <bool name="config_auto_provision_enable">true</bool>
+    <add-resource type="bool" name="config_auto_provision_enable">true</add-resource>
 
     <!-- Set to true if we need to not prefer an APN.
          This is being added to enable a simple scenario of pre-paid
