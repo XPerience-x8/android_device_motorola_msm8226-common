@@ -62,6 +62,10 @@ AUDIO_FEATURE_DISABLED_FM :=
 AUDIO_FEATURE_DISABLED_SSR := true
 BOARD_HAVE_QCOM_FM := true
 AUDIO_FEATURE_DISABLED_ANC_HEADSET := true
+AUDIO_FEATURE_DISABLED_DS1_DOLBY_DDP := true
+
+# GPS
+TARGET_NO_RPC := true
 
 # Graphics
 BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
@@ -75,6 +79,9 @@ TARGET_QCOM_MEDIA_VARIANT := caf-new
 
 # Use qcom power hal
 TARGET_POWERHAL_VARIANT := qcom
+
+# Enable CPU boosting events in the power HAL
+TARGET_USES_CPU_BOOST_HINT := true
 
 TARGET_HW_DISK_ENCRYPTION := true
 
