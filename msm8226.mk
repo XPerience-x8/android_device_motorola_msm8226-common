@@ -165,6 +165,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicerec=false \
     ro.qc.sdk.audio.fluencetype=fluence \
     persist.audio.fluence.speaker=true \
+    persist.audio.handset.mic=digital \
     use.voice.path.for.pcm.voip=true \
     use.dedicated.device.for.voip=true \
     audio.offload.buffer.size.kb=32 \
