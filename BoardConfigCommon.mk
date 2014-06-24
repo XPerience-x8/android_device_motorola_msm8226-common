@@ -24,10 +24,10 @@
 BOARD_VENDOR := motorola-qcom
 
 # Platform
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
-TARGET_BOARD_PLATFORM := msm8226
-TARGET_BOOTLOADER_BOARD_NAME := MSM8226
-TARGET_CPU_VARIANT := krait
+TARGET_BOARD_PLATFORM_GPU 	:= qcom-adreno305
+TARGET_BOARD_PLATFORM 		:= msm8226
+TARGET_BOOTLOADER_BOARD_NAME 	:= MSM8226
+TARGET_CPU_VARIANT 		:= krait
 TARGET_USE_KINGFISHER_OPTIMIZATION := true
 
 -include device/motorola/qcom-common/BoardConfigCommon.mk
@@ -37,14 +37,14 @@ LOCAL_PATH := device/motorola/msm8226-common
 TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
 
 # Inline kernel building
-BOARD_KERNEL_SEPARATED_DT := true
-BOARD_CUSTOM_BOOTIMG_MK := device/motorola/msm8226-common/mkbootimg.mk
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8226
-TARGET_KERNEL_CONFIG := msm8226_mmi_defconfig
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.write_protect=0 zcache
-BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+BOARD_KERNEL_SEPARATED_DT 	:= true
+BOARD_CUSTOM_BOOTIMG_MK 	:= device/motorola/msm8226-common/mkbootimg.mk
+TARGET_KERNEL_SOURCE 		:= kernel/motorola/msm8226
+TARGET_KERNEL_CONFIG 		:= msm8226_mmi_defconfig
+BOARD_KERNEL_CMDLINE 		:= console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.write_protect=0 zcache
+BOARD_KERNEL_BASE 		:= 0x00000000
+BOARD_KERNEL_PAGESIZE		:= 2048
+BOARD_MKBOOTIMG_ARGS 		:= --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 BOARD_HAS_QCOM_WLAN_SDK :=
 
@@ -94,10 +94,10 @@ BOARD_HARDWARE_CLASS := device/motorola/msm8226-common/cmhw/
 TARGET_OTA_ASSERT_DEVICE := xt1031,xt1032,xt1033,xt1034,falcon_umts,falcon_umtsds,falcon_cdma,falcon_retuaws,falcon,falcon_gpe
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
-TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
+TARGET_RECOVERY_FSTAB 		:= $(LOCAL_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT 	:= "RGBX_8888"
+TARGET_USERIMAGES_USE_EXT4 	:= true
+TARGET_USERIMAGES_USE_F2FS 	:= true
+TW_EXTERNAL_STORAGE_PATH 	:= "/usb-otg"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
-BOARD_RECOVERY_SWIPE := true
+BOARD_RECOVERY_SWIPE		:= true
