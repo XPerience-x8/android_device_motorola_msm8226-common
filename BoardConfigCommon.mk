@@ -91,7 +91,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 BOARD_HARDWARE_CLASS := device/motorola/msm8226-common/cmhw/
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := xt1031,xt1032,xt1033,xt1034,falcon_umts,falcon_umtsds,falcon_cdma,falcon_retuaws,falcon,falcon_gpe
+TARGET_OTA_ASSERT_DEVICE := xt1031,xt1032,xt1033,xt1034,xt1039,falcon_umts,falcon_umtsds,falcon_cdma,falcon_retuaws,falcon,falcon_gpe,peregrine
 
 # Recovery
 TARGET_RECOVERY_FSTAB 		:= $(LOCAL_PATH)/rootdir/etc/fstab.qcom
@@ -101,3 +101,6 @@ TARGET_USERIMAGES_USE_F2FS 	:= true
 TW_EXTERNAL_STORAGE_PATH 	:= "/usb-otg"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
 BOARD_RECOVERY_SWIPE		:= true
+
+#Temporary hack : skip building external/chromium_org
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
