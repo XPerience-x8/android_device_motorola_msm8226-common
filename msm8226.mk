@@ -205,7 +205,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.msgtunnel.start=false \
     persist.sys.ssr.restart_level=3 \
     persist.sys.qc.sub.rdump.on=1 \
-    ro.telephony.default_network=7 \
     telephony.lteOnCdmaDevice=0 \
     persist.radio.no_wait_for_card=1 \
     persist.radio.dfr_mode_set=1
