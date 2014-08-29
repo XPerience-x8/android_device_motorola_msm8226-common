@@ -102,36 +102,22 @@ bin/hvdcp
 bin/fmconfig
 bin/fm_qsoc_patches
 
-# GPS
+# GPS - from bacon
 -app/com.qualcomm.location.apk
--app/com.qualcomm.services.location.apk
--app/MotGeoFenceSvc.apk
-bin/location-mq
-bin/xtwifi-client
-bin/xtwifi-inet-agent
+bin/gsiff_daemon
+bin/quipc_igsn
+bin/quipc_main
 etc/permissions/com.qualcomm.location.xml
-etc/gps.conf
-etc/izat.conf
-etc/quipc.conf
-etc/sap.conf
-etc/xtwifi.conf
-etc/xtra_root_cert.pem
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
-vendor/lib/libalarmservice_jni.so
+vendor/lib/hw/flp.default.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
 vendor/lib/liblocationservice.so
-vendor/lib/libloc_ext.so
-vendor/lib/liblowi_client.so
 vendor/lib/libquipc_os_api.so
 vendor/lib/libquipc_ulp_adapter.so
 vendor/lib/libulp2.so
-vendor/lib/libxtadapter.so
-vendor/lib/libxtwifi_ulp_adaptor.so
-vendor/lib/libxtwifi_zpp_adaptor.so
-vendor/lib/libxt_native.so
 
 # Graphics - from bacon
 vendor/lib/egl/eglsubAndroid.so
@@ -275,6 +261,7 @@ vendor/lib/libril-qcril-hook-oem.so
 
 # Sensors
 bin/akmd8963
+etc/sensor_def_qcomdev.conf
 lib/hw/sensors.msm8226.so
 lib/libmot_sensorlistener.so
 vendor/lib/libsensor1.so
