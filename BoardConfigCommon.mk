@@ -105,7 +105,7 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
 BOARD_RECOVERY_SWIPE		:= true
 
 #Temporary hack : skip building external/chromium_org
-PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+#PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
