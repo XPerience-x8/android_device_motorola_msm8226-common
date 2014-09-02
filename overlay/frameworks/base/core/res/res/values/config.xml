@@ -101,4 +101,8 @@
 
     <!-- Component name of the geofence services provider. -->
     <string name="config_geofenceServicesProvider" translatable="false">com.motorola.motgeofencesvc</string>
+
+     <!-- Whether cpu boost is enabled for horizontal scroll. -->
+     <bool name="config_enableCpuBoostForScroller">true</bool>
+     
 </resources>
