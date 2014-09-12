@@ -65,7 +65,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8226 \
     hwcomposer.msm8226 \
     keystore.msm8226 \
-    lights.MSM8226 \
+    lights.msm8226 \
     memtrack.msm8226 \
     power.msm8226
 
@@ -119,7 +119,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/config/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/configs/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/config/mixer_paths.xml:system/etc/mixer_paths.xml
+    $(LOCAL_PATH)/config/mixer_paths.xml:system/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/config/mixer_paths_boost.xml:system/etc/mixer_paths_boost.xml \
+    $(LOCAL_PATH)/config/mixer_paths_p1.xml:system/etc/mixer_paths_p1.xml
 
 # Charger - moto uses a funky ro.bootmode=mot-charger
 PRODUCT_COPY_FILES += \
@@ -141,8 +143,20 @@ PRODUCT_COPY_FILES += \
 # QCOM Display
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.fb_always_on=1 \
-    ro.hdmi.enable=true
+    ro.hdmi.enable=true \
+    tunnel.decode=false \
+    tunnel.audiovideo.decode=false
 
+#hwrelated
+PRODUCT_PROPERTY_OVERRIDES += \
+	debug.sf.hw=1 \
+	debug.egl.hw=1 \
+	debug.composition.type=c2d \
+	persist.hwc.mdpcomp.enable=true \
+	debug.mdpcomp.logs=0 \
+	dalvik.vm.heapsize=36m \
+	dev.pm.dyn_samplingrate=1
+    
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-player=true \
@@ -162,6 +176,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluence \
     persist.audio.fluence.speaker=true \
     persist.audio.handset.mic=digital \
+    persist.audio.fluence.mode=endfire\
     use.voice.path.for.pcm.voip=true \
     use.dedicated.device.for.voip=true \
     audio.offload.buffer.size.kb=32 \
@@ -177,7 +192,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.calfile3=/etc/Handset_cal.acdb \
     persist.audio.calfile4=/etc/Hdmi_cal.acdb \
     persist.audio.calfile5=/etc/Headset_cal.acdb \
-    persist.audio.calfile6=/etc/Speaker_cal.acdb
+    persist.audio.calfile6=/etc/Speaker_cal.acdb \
+    lpa.decode=true \
+    lpa.use-stagefright=true
+
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -204,6 +222,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnCdmaDevice=0 \
     persist.radio.no_wait_for_card=1 \
     persist.radio.dfr_mode_set=1
+    
+#Radio RILD properties
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.radio.no_wait_for_card=1 \
+	persist.radio.call_type=1 \
+	persist.radio.apm_sim_not_pwdn=1 \
+	persist.radio.dfr_mode_set=1 \
+	persist.radio.relay_oprt_change=1
 
 # Opengles version 3
 PRODUCT_PROPERTY_OVERRIDES += \
