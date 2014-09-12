@@ -121,7 +121,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/config/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/config/mixer_paths_boost.xml:system/etc/mixer_paths_boost.xml \
-    $(LOCAL_PATH)/config/mixer_paths_p1.xml:system/etc/mixer_paths_p1.xml
+    $(LOCAL_PATH)/config/mixer_paths_p1.xml:system/etc/mixer_paths_p1.xml \
+    $(LOCAL_PATH)/config/sap.conf:system/etc/sap.conf \
+    $(LOCAL_PATH)/config/msap.conf:system/etc/msap.conf \
+    $(LOCAL_PATH)/config/nfc-nci.conf:system/etc/nfc-nci.conf
 
 # Charger - moto uses a funky ro.bootmode=mot-charger
 PRODUCT_COPY_FILES += \
