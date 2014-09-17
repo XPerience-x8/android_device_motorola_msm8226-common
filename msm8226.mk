@@ -240,7 +240,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QCOM Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320
+    ro.sf.lcd_density=240 \
+    bluetooth.force_pm_timer=1000 
 
 # QC Perf
 PRODUCT_PROPERTY_OVERRIDES += \
